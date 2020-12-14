@@ -17,7 +17,6 @@ NoConn ~ 5000 6700
 NoConn ~ 6350 6700
 NoConn ~ 6350 6600
 NoConn ~ 6350 6500
-NoConn ~ 6350 5600
 NoConn ~ 6350 5500
 NoConn ~ 6350 5300
 NoConn ~ 6350 5200
@@ -701,4 +700,45 @@ Wire Wire Line
 Connection ~ 1750 650 
 Wire Wire Line
 	1750 650  3800 650 
+Wire Wire Line
+	6350 5600 7550 5600
+Wire Wire Line
+	7550 5600 7550 5750
+Wire Wire Line
+	6350 5400 7750 5400
+Wire Wire Line
+	7400 5850 7400 6300
+Wire Wire Line
+	7400 6300 6350 6300
+Wire Wire Line
+	6350 6400 7500 6400
+Wire Wire Line
+	7500 6400 7500 5950
+Wire Wire Line
+	7750 6900 4750 6900
+Wire Wire Line
+	4750 6900 4750 6200
+Wire Wire Line
+	4750 6200 5000 6200
+Wire Wire Line
+	7750 5850 7400 5850
+Wire Wire Line
+	7500 5950 7750 5950
+Wire Wire Line
+	7750 6050 7750 6900
+Wire Wire Line
+	7750 5400 7750 5650
+Wire Wire Line
+	7550 5750 7750 5750
+$Comp
+L joystick:Joystick U?
+U 1 1 5FD914AC
+P 8100 5900
+F 0 "U?" H 8428 5971 50  0000 L CNN
+F 1 "Joystick" H 8428 5880 50  0000 L CNN
+F 2 "" H 8100 5900 50  0001 C CNN
+F 3 "" H 8100 5900 50  0001 C CNN
+	1    8100 5900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
