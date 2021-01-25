@@ -67,20 +67,33 @@ X VIN VI 250 1150 200 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# joystick_Joystick
+# mini_keyboard-rescue_Joystick-joystick
 #
-DEF joystick_Joystick U 0 40 Y Y 1 F N
+DEF mini_keyboard-rescue_Joystick-joystick U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "joystick_Joystick" 50 -250 50 H V C CNN
+F1 "mini_keyboard-rescue_Joystick-joystick" 50 -250 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 S -250 350 300 -300 0 1 0 f
-X +5V ~ -350 150 100 R 50 50 1 1 I
-X GND ~ -350 250 100 R 50 50 1 1 O
-X SW ~ -350 -150 100 R 50 50 1 1 O
-X VRX ~ -350 -50 100 R 50 50 1 1 O
-X VRY ~ -350 50 100 R 50 50 1 1 O
+X GND 1 -350 250 100 R 50 50 1 1 W
+X +5V 2 -350 150 100 R 50 50 1 1 W
+X VRY 3 -350 50 100 R 50 50 1 1 O
+X VRX 4 -350 -50 100 R 50 50 1 1 O
+X SW 5 -350 -150 100 R 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #
