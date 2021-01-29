@@ -644,17 +644,6 @@ Text Label 1850 6000 0    50   ~ 0
 row4
 Text Label 1650 6100 0    50   ~ 0
 row5
-$Comp
-L promicro:ProMicro U?
-U 1 1 60148DE3
-P 5900 6400
-F 0 "U?" H 5900 7437 60  0000 C CNN
-F 1 "ProMicro" H 5900 7331 60  0000 C CNN
-F 2 "" H 6000 5350 60  0000 C CNN
-F 3 "" H 6000 5350 60  0000 C CNN
-	1    5900 6400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3650 4250 3650 4750
 Connection ~ 3650 4250
@@ -678,12 +667,51 @@ col4
 $Comp
 L Connector:Conn_01x05_Male J?
 U 1 1 60183F68
-P 8200 5650
-F 0 "J?" H 8308 6031 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 8308 5940 50  0000 C CNN
-F 2 "" H 8200 5650 50  0001 C CNN
-F 3 "~" H 8200 5650 50  0001 C CNN
-	1    8200 5650
+P 6000 7400
+F 0 "J?" H 6108 7781 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 6108 7690 50  0000 C CNN
+F 2 "" H 6000 7400 50  0001 C CNN
+F 3 "~" H 6000 7400 50  0001 C CNN
+	1    6000 7400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L promicro:ProMicro U?
+U 1 1 60148DE3
+P 5900 6400
+F 0 "U?" H 5900 7437 60  0000 C CNN
+F 1 "ProMicro" H 5900 7331 60  0000 C CNN
+F 2 "" H 6000 5350 60  0000 C CNN
+F 3 "" H 6000 5350 60  0000 C CNN
+	1    5900 6400
 	1    0    0    -1  
 $EndComp
+Text Label 6600 6050 0    50   ~ 0
+col1
+Text Label 6600 6150 0    50   ~ 0
+col2
+Text Label 6600 6250 0    50   ~ 0
+col3
+Text Label 6600 6350 0    50   ~ 0
+col4
+Text Label 5200 6050 2    50   ~ 0
+row1
+Text Label 5200 6150 2    50   ~ 0
+row2
+Text Label 5200 6250 2    50   ~ 0
+row3
+Text Label 5200 6350 2    50   ~ 0
+row4
+Text Label 5200 6450 2    50   ~ 0
+row5
+Text Label 6200 7200 1    50   ~ 0
+GND
+Text Label 6100 7200 1    50   ~ 0
+5V
+Text Label 6000 7200 1    50   ~ 0
+VRY
+Text Label 5900 7200 1    50   ~ 0
+VRX
+Text Label 5800 7200 1    50   ~ 0
+SW
 $EndSCHEMATC
