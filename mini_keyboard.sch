@@ -665,21 +665,10 @@ col3
 Text Label 8900 4750 0    50   ~ 0
 col4
 $Comp
-L Connector:Conn_01x05_Male J?
-U 1 1 60183F68
-P 6000 7400
-F 0 "J?" H 6108 7781 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 6108 7690 50  0000 C CNN
-F 2 "" H 6000 7400 50  0001 C CNN
-F 3 "~" H 6000 7400 50  0001 C CNN
-	1    6000 7400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L promicro:ProMicro U?
+L promicro:ProMicro U1
 U 1 1 60148DE3
 P 5900 6400
-F 0 "U?" H 5900 7437 60  0000 C CNN
+F 0 "U1" H 5900 7437 60  0000 C CNN
 F 1 "ProMicro" H 5900 7331 60  0000 C CNN
 F 2 "" H 6000 5350 60  0000 C CNN
 F 3 "" H 6000 5350 60  0000 C CNN
@@ -704,14 +693,101 @@ Text Label 5200 6350 2    50   ~ 0
 row4
 Text Label 5200 6450 2    50   ~ 0
 row5
-Text Label 6200 7200 1    50   ~ 0
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 60183F68
+P 7650 6500
+F 0 "J1" H 7758 6881 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 7758 6790 50  0000 C CNN
+F 2 "" H 7650 6500 50  0001 C CNN
+F 3 "~" H 7650 6500 50  0001 C CNN
+	1    7650 6500
+	0    -1   -1   0   
+$EndComp
+Text Label 7850 5450 1    50   ~ 0
 GND
-Text Label 6100 7200 1    50   ~ 0
+Text Label 7750 5450 1    50   ~ 0
 5V
-Text Label 6000 7200 1    50   ~ 0
+Text Label 7650 5450 1    50   ~ 0
 VRY
-Text Label 5900 7200 1    50   ~ 0
+Text Label 7550 5450 1    50   ~ 0
 VRX
-Text Label 5800 7200 1    50   ~ 0
+Text Label 7450 5450 1    50   ~ 0
 SW
+Wire Wire Line
+	7850 5750 7450 5750
+Wire Wire Line
+	7750 5950 7450 5950
+Wire Wire Line
+	7850 5750 7850 6300
+Wire Wire Line
+	7750 5950 7750 6300
+Wire Wire Line
+	7650 6300 7650 6000
+Wire Wire Line
+	7650 6000 6850 6000
+Wire Wire Line
+	6850 6000 6850 6750
+Wire Wire Line
+	6850 6750 6600 6750
+Wire Wire Line
+	7550 6300 7550 6050
+Wire Wire Line
+	7550 6050 6900 6050
+Wire Wire Line
+	6900 6050 6900 6900
+Wire Wire Line
+	6900 6900 5200 6900
+Wire Wire Line
+	5200 6900 5200 6750
+Wire Wire Line
+	7450 6300 7450 6100
+Wire Wire Line
+	7450 6100 6950 6100
+Wire Wire Line
+	6950 6100 6950 6950
+Wire Wire Line
+	6950 6950 5150 6950
+Wire Wire Line
+	5150 6950 5150 6650
+Wire Wire Line
+	5150 6650 5200 6650
+NoConn ~ 6600 6650
+NoConn ~ 6600 6550
+NoConn ~ 6600 6450
+NoConn ~ 6600 5850
+NoConn ~ 6600 5650
+NoConn ~ 5200 6550
+NoConn ~ 5200 5950
+NoConn ~ 5200 5850
+NoConn ~ 5200 5750
+NoConn ~ 5200 5650
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 602049E6
+P 7450 5750
+F 0 "#FLG0101" H 7450 5825 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 5923 50  0000 C CNN
+F 2 "" H 7450 5750 50  0001 C CNN
+F 3 "~" H 7450 5750 50  0001 C CNN
+	1    7450 5750
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 5750
+Wire Wire Line
+	7450 5750 6600 5750
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 60205AA3
+P 7450 5950
+F 0 "#FLG0102" H 7450 6025 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 6123 50  0000 C CNN
+F 2 "" H 7450 5950 50  0001 C CNN
+F 3 "~" H 7450 5950 50  0001 C CNN
+	1    7450 5950
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 5950
+Wire Wire Line
+	7450 5950 6600 5950
 $EndSCHEMATC
