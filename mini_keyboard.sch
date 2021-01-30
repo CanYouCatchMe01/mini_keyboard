@@ -635,15 +635,15 @@ F 3 "~" H 6900 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2450 5700 0    50   ~ 0
-row1
+in1
 Text Label 2250 5800 0    50   ~ 0
-row2
+in2
 Text Label 2050 5900 0    50   ~ 0
-row3
+in3
 Text Label 1850 6000 0    50   ~ 0
-row4
+in4
 Text Label 1650 6100 0    50   ~ 0
-row5
+in5
 Wire Wire Line
 	3650 4250 3650 4750
 Connection ~ 3650 4250
@@ -657,42 +657,29 @@ Wire Wire Line
 	8900 4250 8900 4750
 Connection ~ 8900 4250
 Text Label 3650 4750 0    50   ~ 0
-col1
+out1
 Text Label 5350 4750 0    50   ~ 0
-col2
+out2
 Text Label 7200 4750 0    50   ~ 0
-col3
+out3
 Text Label 8900 4750 0    50   ~ 0
-col4
-$Comp
-L mini_keyboard-rescue:ProMicro-promicro U1
-U 1 1 60148DE3
-P 5900 6400
-F 0 "U1" H 5900 7437 60  0000 C CNN
-F 1 "ProMicro" H 5900 7331 60  0000 C CNN
-F 2 "promicro:ProMicro" H 6000 5350 60  0001 C CNN
-F 3 "" H 6000 5350 60  0000 C CNN
-	1    5900 6400
-	1    0    0    -1  
-$EndComp
-Text Label 6600 6050 0    50   ~ 0
-col1
-Text Label 6600 6150 0    50   ~ 0
-col2
-Text Label 6600 6250 0    50   ~ 0
-col3
-Text Label 6600 6350 0    50   ~ 0
-col4
-Text Label 5200 6050 2    50   ~ 0
-row1
-Text Label 5200 6150 2    50   ~ 0
-row2
-Text Label 5200 6250 2    50   ~ 0
-row3
-Text Label 5200 6350 2    50   ~ 0
-row4
+out4
+Text Label 5200 6750 2    50   ~ 0
+out1
+Text Label 5200 6650 2    50   ~ 0
+out2
+Text Label 5200 6550 2    50   ~ 0
+out3
 Text Label 5200 6450 2    50   ~ 0
-row5
+out4
+Text Label 6600 6750 0    50   ~ 0
+in1
+Text Label 6600 6550 0    50   ~ 0
+in3
+Text Label 6600 6450 0    50   ~ 0
+in4
+Text Label 6600 6350 0    50   ~ 0
+in5
 $Comp
 L Connector:Conn_01x05_Male J1
 U 1 1 60183F68
@@ -722,42 +709,8 @@ Wire Wire Line
 	7850 5750 7850 6300
 Wire Wire Line
 	7750 5950 7750 6300
-Wire Wire Line
-	7650 6300 7650 6000
-Wire Wire Line
-	7650 6000 6850 6000
-Wire Wire Line
-	6850 6000 6850 6750
-Wire Wire Line
-	6850 6750 6600 6750
-Wire Wire Line
-	7550 6300 7550 6050
-Wire Wire Line
-	7550 6050 6900 6050
-Wire Wire Line
-	6900 6050 6900 6900
-Wire Wire Line
-	6900 6900 5200 6900
-Wire Wire Line
-	5200 6900 5200 6750
-Wire Wire Line
-	7450 6300 7450 6100
-Wire Wire Line
-	7450 6100 6950 6100
-Wire Wire Line
-	6950 6100 6950 6950
-Wire Wire Line
-	6950 6950 5150 6950
-Wire Wire Line
-	5150 6950 5150 6650
-Wire Wire Line
-	5150 6650 5200 6650
-NoConn ~ 6600 6650
-NoConn ~ 6600 6550
-NoConn ~ 6600 6450
 NoConn ~ 6600 5850
 NoConn ~ 6600 5650
-NoConn ~ 5200 6550
 NoConn ~ 5200 5950
 NoConn ~ 5200 5850
 NoConn ~ 5200 5750
@@ -790,4 +743,33 @@ $EndComp
 Connection ~ 7450 5950
 Wire Wire Line
 	7450 5950 6600 5950
+Wire Wire Line
+	7650 6300 7650 6050
+Wire Wire Line
+	7650 6050 6600 6050
+Wire Wire Line
+	7550 6300 7550 6150
+Wire Wire Line
+	7550 6150 6600 6150
+Wire Wire Line
+	7450 6300 7450 6250
+Wire Wire Line
+	7450 6250 6600 6250
+$Comp
+L mini_keyboard-rescue:ProMicro-promicro U1
+U 1 1 60148DE3
+P 5900 6400
+F 0 "U1" H 5900 7437 60  0000 C CNN
+F 1 "ProMicro" H 5900 7331 60  0000 C CNN
+F 2 "promicro:ProMicro" H 6000 5350 60  0001 C CNN
+F 3 "" H 6000 5350 60  0000 C CNN
+	1    5900 6400
+	1    0    0    -1  
+$EndComp
+Text Label 6600 6650 0    50   ~ 0
+in2
+NoConn ~ 5200 6350
+NoConn ~ 5200 6250
+NoConn ~ 5200 6150
+NoConn ~ 5200 6050
 $EndSCHEMATC
