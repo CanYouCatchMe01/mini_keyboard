@@ -665,12 +665,12 @@ col3
 Text Label 8900 4750 0    50   ~ 0
 col4
 $Comp
-L promicro:ProMicro U1
+L mini_keyboard-rescue:ProMicro-promicro U1
 U 1 1 60148DE3
 P 5900 6400
 F 0 "U1" H 5900 7437 60  0000 C CNN
 F 1 "ProMicro" H 5900 7331 60  0000 C CNN
-F 2 "" H 6000 5350 60  0000 C CNN
+F 2 "promicro:ProMicro" H 6000 5350 60  0001 C CNN
 F 3 "" H 6000 5350 60  0000 C CNN
 	1    5900 6400
 	1    0    0    -1  
@@ -699,7 +699,7 @@ U 1 1 60183F68
 P 7650 6500
 F 0 "J1" H 7758 6881 50  0000 C CNN
 F 1 "Conn_01x05_Male" H 7758 6790 50  0000 C CNN
-F 2 "" H 7650 6500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7650 6500 50  0001 C CNN
 F 3 "~" H 7650 6500 50  0001 C CNN
 	1    7650 6500
 	0    -1   -1   0   

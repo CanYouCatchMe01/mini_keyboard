@@ -1,5 +1,5 @@
 (fp_lib_table
   (lib (name arduino_micro_shield)(type KiCad)(uri C:/Users/3/Downloads/arduino_micro_shield-master/arduino_micro_shield-master/arduino_micro_shield.pretty)(options "")(descr ""))
   (lib (name Joystick)(type KiCad)(uri C:/Users/3/Documents/KiCad/mini_keyboard/mini_keyboard)(options "")(descr ""))
-  (lib (name promicro)(type KiCad)(uri C:/Users/18maca/Downloads/ProMicroKiCad-master/ProMicroKiCad-master/promicro.pretty)(options "")(descr ""))
+  (lib (name promicro)(type KiCad)(uri C:/Users/3/Downloads/ProMicroKiCad-master/ProMicroKiCad-master/promicro.pretty)(options "")(descr ""))
 )
