@@ -760,16 +760,16 @@ F 3 "" H 6000 5350 60  0000 C CNN
 $EndComp
 Text Label 6600 6650 0    50   ~ 0
 in2
-NoConn ~ 5200 6350
-NoConn ~ 5200 6250
 NoConn ~ 5200 6150
 NoConn ~ 5200 6050
-Text Label 5200 6450 2    50   ~ 0
+Text Label 5200 6250 2    50   ~ 0
 out1
-Text Label 5200 6550 2    50   ~ 0
+Text Label 5200 6450 2    50   ~ 0
 out2
 Text Label 5200 6650 2    50   ~ 0
 out3
 Text Label 5200 6750 2    50   ~ 0
 out4
+NoConn ~ 5200 6350
+NoConn ~ 5200 6550
 $EndSCHEMATC
