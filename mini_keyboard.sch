@@ -664,14 +664,6 @@ Text Label 7200 4750 0    50   ~ 0
 out3
 Text Label 8900 4750 0    50   ~ 0
 out4
-Text Label 5200 6750 2    50   ~ 0
-out1
-Text Label 5200 6650 2    50   ~ 0
-out2
-Text Label 5200 6550 2    50   ~ 0
-out3
-Text Label 5200 6450 2    50   ~ 0
-out4
 Text Label 6600 6750 0    50   ~ 0
 in1
 Text Label 6600 6550 0    50   ~ 0
@@ -772,4 +764,12 @@ NoConn ~ 5200 6350
 NoConn ~ 5200 6250
 NoConn ~ 5200 6150
 NoConn ~ 5200 6050
+Text Label 5200 6450 2    50   ~ 0
+out1
+Text Label 5200 6550 2    50   ~ 0
+out2
+Text Label 5200 6650 2    50   ~ 0
+out3
+Text Label 5200 6750 2    50   ~ 0
+out4
 $EndSCHEMATC
