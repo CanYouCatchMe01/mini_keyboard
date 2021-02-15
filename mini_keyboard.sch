@@ -574,7 +574,7 @@ U 1 1 5FDC6F80
 P 5050 2250
 F 0 "SW6" H 5050 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 5050 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 5050 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 5050 2250 50  0001 C CNN
 F 3 "~" H 5050 2250 50  0001 C CNN
 	1    5050 2250
 	1    0    0    -1  
@@ -585,7 +585,7 @@ U 1 1 5FDC6F68
 P 3350 2250
 F 0 "SW1" H 3350 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 3350 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 3350 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 3350 2250 50  0001 C CNN
 F 3 "~" H 3350 2250 50  0001 C CNN
 	1    3350 2250
 	1    0    0    -1  
@@ -618,7 +618,7 @@ U 1 1 5FD68648
 P 8600 2250
 F 0 "SW16" H 8600 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 8600 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 8600 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 8600 2250 50  0001 C CNN
 F 3 "~" H 8600 2250 50  0001 C CNN
 	1    8600 2250
 	1    0    0    -1  
@@ -629,7 +629,7 @@ U 1 1 5FD68630
 P 6900 2250
 F 0 "SW11" H 6900 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 6900 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 6900 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 6900 2250 50  0001 C CNN
 F 3 "~" H 6900 2250 50  0001 C CNN
 	1    6900 2250
 	1    0    0    -1  
