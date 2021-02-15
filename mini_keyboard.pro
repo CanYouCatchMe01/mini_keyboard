@@ -1,4 +1,4 @@
-update=15/02/2021 14:38:40
+update=15/02/2021 15:03:27
 version=1
 last_client=kicad
 [general]
@@ -70,7 +70,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -240,7 +240,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.15
+Clearance=0.3
 TrackWidth=0.4
 ViaDiameter=1.2
 ViaDrill=0.6
