@@ -5,6 +5,7 @@ byte len_shifting_pins = sizeof(shifting_pins)/sizeof(shifting_pins[0]); //sizeo
 byte len_input_pins = sizeof(input_pins)/sizeof(input_pins[0]); //sizeof() = memory size
 
 void setup() {
+  Serial.begin(9600);
   for (byte i = 0; i < len_input_pins; i++)
   {
     pinMode(input_pins[i], INPUT_PULLUP);
@@ -14,6 +15,7 @@ void setup() {
   for (byte i = 0; i < len_shifting_pins; i++)
   {
     pinMode(shifting_pins[i], OUTPUT);
+    digitalWrite(shifting_pins[i], LOW); //Make output LOW
   }
 
 }
@@ -25,20 +27,6 @@ void loop() {
     Serial.print(" ");
     Serial.print(analogRead(input_pins[i]));
     Serial.println();
-  }
-
-  //All shifting pins sets to input
-  for (byte i = 0; i < len_shifting_pins; i++)
-  {
-    digitalWrite(shifting_pins[i], LOW); //Make output LOW
-  }
-
-  delay(100);
-  
-  //All shifting pins sets to input
-  for (byte i = 0; i < len_shifting_pins; i++)
-  {
-    digitalWrite(shifting_pins[i], HIGH); //Make output LOW
   }
 
   delay(1000);
