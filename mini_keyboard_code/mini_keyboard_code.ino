@@ -10,8 +10,8 @@
 
 #include <Keyboard.h>
 
-byte shifting_pins[] = {10,16,14,15,18};
-byte input_pins[] = {A6, A7, A8, A9};
+byte shifting_pins[] = {A6, A7, A8, A9};
+byte input_pins[] = {10,16,14,15,18};
 byte joystick_button_pin = 18;
 byte VRX = A1, VRY = A2;
 byte ESCbuttonNum = 99;
@@ -25,7 +25,7 @@ void setup() {
   //Input pins
   for (byte i = 0; i < len_input_pins; i++)
   {
-    pinMode(input_pins[i], INPUT);
+    pinMode(input_pins[i], INPUT_PULLUP);
   }
 
   //All shifting pins sets to input
@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop() {
-  delay(500);
+  delay(100);
   //Reads buttons
   byte loop_times = 0;
   for(byte s = 0; s < len_shifting_pins; s++) //För varje input pin
@@ -47,7 +47,7 @@ void loop() {
     {
       Serial.print(loop_times);
       Serial.print(": ");
-      Serial.println(analogRead(input_pins[i]));
+      Serial.println(digitalRead(input_pins[i]));
       loop_times++;
     }
     digitalWrite(shifting_pins[s], HIGH);
