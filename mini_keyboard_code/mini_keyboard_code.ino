@@ -11,50 +11,26 @@
 #include <Keyboard.h>
 #include <Joystick.h>
 
-//Class that keeps track of key_value
-//and don't spam "release", so PC can turn off.
-class Switch{
- public:
- 
- bool is_pressed = false;
- char key_value;
- 
- Switch(char kv){
-  key_value = kv;
- }
- 
- void pres(){
-  Keyboard.press(key_value);
-  is_pressed = true;
- }
-
- void releas(){
-  if (is_pressed){
-    Keyboard.release(key_value);
-    //is_pressed = false;
-  }
- }
-};
-
 byte shifting_pins[] = {A6, A7, A8, A9};
 byte input_pins[] = {10,16,14,15,18};
-byte joystick_button_pin = 18;
-byte VRX = A1, VRY = A2;
+byte joystick_button_pin = 19;
+byte VRX = A2, VRY = A3;
 
 byte len_shifting_pins = sizeof(shifting_pins)/sizeof(shifting_pins[0]); //sizeof() = memory size
 byte len_input_pins = sizeof(input_pins)/sizeof(input_pins[0]); //sizeof() = memory size
 
-Switch switches[] = {
-  (KEY_ESC), ('2'), ('3'), ('4'), ('5'),
-  ('q'), ('w'), ('e'), ('r'), ('t'),
-  ('a'), ('s'), ('d'), ('f'), ('g'),
-  ('z'), ('x'), ('c'), ('v'), ('b')
-  };
+//main keys
+char keys[] = {
+  KEY_ESC, '2', '3', '4', '5',
+  'q', 'w', 'e', 'r', 't',
+  'a','s', 'd', 'f', 'g',
+  'z', 'x', 'c', 'v', 'b'};
 
-Switch joystick_btn('n'), forward('9'), back('8'), right('7'), left('7');
+//special keys
+char joystick_btn = 'm', forward = '9', back = '8', right = '7', left = '6';
 
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
-  0, 0,       // Button Count, Hat Switch Count
+  0, 0,                  // Button Count, Hat Switch Count
   true, true, false,     // X, Y, Z Axis
   false, false, false,   // Rx, Ry, Rz (Rotation)
   false, false,          // rudder, throttle
@@ -97,11 +73,11 @@ void read_main_buttons()
       //Serial.println(digitalRead(input_pins[i]));
       if(!digitalRead(input_pins[i]))
       {
-        switches[loop_times].pres();
+        Keyboard.press(keys[loop_times]);
       }
       else
       {
-        switches[loop_times].releas();
+        Keyboard.release(keys[loop_times]);
       }
       loop_times++;
     }
@@ -113,11 +89,11 @@ void read_joystick_button()
 {
   if(!digitalRead(joystick_button_pin))
   {
-    joystick_btn.pres();
+    Keyboard.press(joystick_btn);
   }
   else
   {
-    joystick_btn.releas();
+    Keyboard.release(joystick_btn);
   }
 }
 
@@ -127,56 +103,61 @@ void read_joystick_controller()
   Joystick.setYAxis(analogRead(VRY));
 }
 
-void read_joystick_keys(int dead_zone = 100)
+void read_joystick_keys(int dead_zone = 100, int mid_x = 590, int mid_y = 570)
 {
-  if(analogRead(VRX) > 512 + dead_zone)
+  //back
+  if(analogRead(VRY) > mid_y + dead_zone)
   {
-    forward.pres();
+    Keyboard.press(back);
   }
         
   else
   {
-    forward.releas();
+    Keyboard.release(back);
   }
 
-    if(analogRead(A0) < 500-100)
+  //forward
+  if(analogRead(VRY) < mid_y - dead_zone)
   {
-   Keyboard.press('8'); //97 = 'a'; 98 = 'b'
-   }
+    Keyboard.press(forward);
+  }
         
-  else //release button
+  else
   {
-   Keyboard.release('8'); //97 = 'a'; 98 = 'b'
+    Keyboard.release(forward);
+  }
+  
+  //right
+  if(analogRead(VRX) > mid_x + dead_zone)
+  {
+    Keyboard.press(right);
+  }
+        
+  else
+  {
+    Keyboard.release(right);
   }
 
-    if(analogRead(A1) > 500+100)
+  //left
+  if(analogRead(VRX) < mid_x - dead_zone)
   {
-   Keyboard.press('7'); //97 = 'a'; 98 = 'b'
-   }
-        
-  else //release button
-  {
-   Keyboard.release('7'); //97 = 'a'; 98 = 'b'
+    Keyboard.press(left);
   }
-
-    if(analogRead(A1) < 500-100)
-  {
-   Keyboard.press('6'); //97 = 'a'; 98 = 'b'
-   }
         
-  else //release button
+  else
   {
-   Keyboard.release('6'); //97 = 'a'; 98 = 'b'
+    Keyboard.release(left);
   }
 }
 
 
 void loop() {
   read_main_buttons();
-  //read_joystick_button();
-  //read_joystick_controller();
-  
-  
-  
+  Serial.println(!digitalRead(joystick_button_pin));
+  Serial.println(analogRead(VRX));
+  Serial.println(analogRead(VRY));
+  read_joystick_button();
+  read_joystick_controller();
+  //read_joystick_keys();
   delay(1);
 }
