@@ -10,6 +10,7 @@
 
 #include <Keyboard.h>
 #include <Joystick.h>
+#include <Mouse.h>
 
 byte shifting_pins[] = {A6, A7, A8, A9};
 byte input_pins[] = {10,16,14,15,18};
@@ -30,7 +31,7 @@ char keys[] = {
 char joystick_btn = 'm', forward = '9', back = '8', right = '7', left = '6';
 
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,JOYSTICK_TYPE_GAMEPAD,
-  0, 0,                  // Button Count, Hat Switch Count
+  1, 0,                  // Button Count, Hat Switch Count
   true, true, false,     // X, Y, Z Axis
   false, false, false,   // Rx, Ry, Rz (Rotation)
   false, false,          // rudder, throttle
@@ -40,6 +41,8 @@ void setup() {
   Serial.begin(9600);
   Joystick.begin();
   Keyboard.begin();
+  Mouse.begin();
+  
   
   //input_pins
   for (byte i = 0; i < len_input_pins; i++)
@@ -68,16 +71,37 @@ void read_main_buttons()
     digitalWrite(shifting_pins[s], LOW);
     for(byte i = 0; i < len_input_pins; i++) //Loop trought shifting_pins
     {
-      //Serial.print(loop_times);
-      //Serial.print(": ");
-      //Serial.println(digitalRead(input_pins[i]));
+      //Press
       if(!digitalRead(input_pins[i]))
       {
-        Keyboard.press(keys[loop_times]);
+        if (loop_times == 11)
+        {
+          Mouse.press(MOUSE_RIGHT);
+        }
+        else if (loop_times == 12)
+        {
+          Mouse.press(MOUSE_LEFT);
+        }
+        else
+        {
+          Keyboard.press(keys[loop_times]);
+        }
       }
+      //Release
       else
       {
-        Keyboard.release(keys[loop_times]);
+        if (loop_times == 11)
+        {
+          Mouse.release(MOUSE_RIGHT);
+        }
+        else if (loop_times == 12)
+        {
+          Mouse.release(MOUSE_LEFT);
+        }
+        else
+        {
+          Keyboard.release(keys[loop_times]);
+        }
       }
       loop_times++;
     }
@@ -89,10 +113,12 @@ void read_joystick_button()
 {
   if(!digitalRead(joystick_button_pin))
   {
+    Joystick.setButton(0, 1);
     Keyboard.press(joystick_btn);
   }
   else
   {
+    Joystick.setButton(0, 0);
     Keyboard.release(joystick_btn);
   }
 }
