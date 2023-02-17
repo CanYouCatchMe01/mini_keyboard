@@ -10,7 +10,7 @@
 
 #include <Keyboard.h>
 #include <Joystick.h>
-#include <Mouse.h>
+//#include <Mouse.h>
 
 byte shifting_pins[] = {A6, A7, A8, A9};
 byte input_pins[] = {10,16,14,15,18};
@@ -41,7 +41,7 @@ void setup() {
   Serial.begin(9600);
   Joystick.begin();
   Keyboard.begin();
-  Mouse.begin();
+  //Mouse.begin();
   
   
   //input_pins
@@ -72,8 +72,9 @@ void read_main_buttons()
     for(byte i = 0; i < len_input_pins; i++) //Loop trought shifting_pins
     {
       //Press
+      
       if(!digitalRead(input_pins[i]))
-      {
+      {/*
         if (loop_times == 11)
         {
           Mouse.press(MOUSE_RIGHT);
@@ -83,13 +84,13 @@ void read_main_buttons()
           Mouse.press(MOUSE_LEFT);
         }
         else
-        {
+        {*/
           Keyboard.press(keys[loop_times]);
-        }
+        //}
       }
       //Release
       else
-      {
+      {/*
         if (loop_times == 11)
         {
           Mouse.release(MOUSE_RIGHT);
@@ -99,9 +100,9 @@ void read_main_buttons()
           Mouse.release(MOUSE_LEFT);
         }
         else
-        {
+        {*/
           Keyboard.release(keys[loop_times]);
-        }
+        //}
       }
       loop_times++;
     }
@@ -129,7 +130,7 @@ void read_joystick_controller()
   Joystick.setYAxis(analogRead(VRY));
 }
 
-void read_joystick_keys(int dead_zone = 100, int mid_x = 590, int mid_y = 570)
+void read_joystick_keys(int dead_zone = 200, int mid_x = 590, int mid_y = 570)
 {
   //back
   if(analogRead(VRY) > mid_y + dead_zone)
@@ -184,6 +185,6 @@ void loop() {
   Serial.println(analogRead(VRY));
   read_joystick_button();
   read_joystick_controller();
-  //read_joystick_keys();
+  read_joystick_keys();
   delay(1);
 }
