@@ -13,14 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 5000 6700
-NoConn ~ 6350 6700
-NoConn ~ 6350 6600
-NoConn ~ 6350 6500
-NoConn ~ 6350 5500
-NoConn ~ 6350 5300
-NoConn ~ 6350 5200
-NoConn ~ 6350 5100
 $Comp
 L Switch:SW_DIP_x01 SW12
 U 1 1 5FD68636
@@ -109,26 +101,6 @@ F 3 "~" H 8100 2700 50  0001 C CNN
 	1    8100 2700
 	1    0    0    -1  
 $EndComp
-$Comp
-L arduino_micro_shield:ARDUINO_MICRO_SHIELD U1
-U 1 1 5FD3DC77
-P 5200 5050
-F 0 "U1" V 5003 5525 60  0000 C CNN
-F 1 "ARDUINO_MICRO_SHIELD" V 5109 5525 60  0000 C CNN
-F 2 "arduino_micro_shield:ARDUINO_MICRO_SHIELD" H 5600 5000 60  0001 C CNN
-F 3 "" H 5600 5000 60  0000 C CNN
-	1    5200 5050
-	0    1    1    0   
-$EndComp
-NoConn ~ 5000 6600
-NoConn ~ 5000 6500
-NoConn ~ 5000 6400
-NoConn ~ 5000 6300
-NoConn ~ 5000 5100
-NoConn ~ 5000 5200
-NoConn ~ 5000 5300
-NoConn ~ 5000 5400
-NoConn ~ 5000 5500
 $Comp
 L pspice:DIODE D13
 U 1 1 5FD9DB0A
@@ -306,10 +278,6 @@ F 3 "~" H 4550 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 5700 2450 5700
-Wire Wire Line
-	5000 5800 2250 5800
-Wire Wire Line
 	7700 2700 7900 2700
 Wire Wire Line
 	6000 2700 6200 2700
@@ -317,8 +285,6 @@ Wire Wire Line
 	4150 2700 4350 2700
 Wire Wire Line
 	2350 2700 2650 2700
-Wire Wire Line
-	5000 5900 2050 5900
 Wire Wire Line
 	2050 5900 2050 1200
 Wire Wire Line
@@ -338,8 +304,6 @@ Wire Wire Line
 Wire Wire Line
 	1850 6000 1850 900 
 Wire Wire Line
-	1850 6000 5000 6000
-Wire Wire Line
 	1850 900  1950 900 
 Wire Wire Line
 	2650 3750 1950 3750
@@ -351,27 +315,15 @@ Wire Wire Line
 	3650 3250 3650 3750
 Connection ~ 3650 3250
 Wire Wire Line
-	3650 4750 6500 4750
-Wire Wire Line
-	6500 4750 6500 5900
-Wire Wire Line
-	6500 5900 6350 5900
-Wire Wire Line
 	5350 2700 5350 3250
 Wire Wire Line
 	5350 3250 5350 3750
 Connection ~ 5350 3250
 Wire Wire Line
-	6550 4650 6550 6000
-Wire Wire Line
-	6550 6000 6350 6000
-Wire Wire Line
 	7200 2700 7200 3250
 Wire Wire Line
 	7200 3250 7200 3750
 Connection ~ 7200 3250
-Wire Wire Line
-	7200 6100 6350 6100
 Wire Wire Line
 	8900 2250 8900 2700
 Wire Wire Line
@@ -380,8 +332,6 @@ Connection ~ 8900 2700
 Wire Wire Line
 	8900 3250 8900 3750
 Connection ~ 8900 3250
-Wire Wire Line
-	8900 6200 6350 6200
 $Comp
 L Switch:SW_DIP_x01 SW5
 U 1 1 5FD84C29
@@ -463,16 +413,8 @@ Wire Wire Line
 	8900 3750 8900 4250
 Connection ~ 8900 3750
 Wire Wire Line
-	8900 6200 8900 4250
-Connection ~ 8900 4250
-Wire Wire Line
 	7200 3750 7200 4250
 Connection ~ 7200 3750
-Wire Wire Line
-	7200 4250 7200 6100
-Connection ~ 7200 4250
-Wire Wire Line
-	5350 4650 6550 4650
 $Comp
 L Switch:SW_DIP_x01 SW10
 U 1 1 5FD872AB
@@ -488,16 +430,8 @@ Wire Wire Line
 	5350 3750 5350 4250
 Connection ~ 5350 3750
 Wire Wire Line
-	5350 4250 5350 4650
-Connection ~ 5350 4250
-Wire Wire Line
 	3650 3750 3650 4250
 Connection ~ 3650 3750
-Wire Wire Line
-	3650 4750 3650 4250
-Connection ~ 3650 4250
-Wire Wire Line
-	5000 6100 1650 6100
 Wire Wire Line
 	1650 6100 1650 650 
 Wire Wire Line
@@ -512,76 +446,6 @@ Wire Wire Line
 	2650 4250 1750 4250
 Wire Wire Line
 	1750 4250 1750 650 
-Wire Wire Line
-	7550 5600 7550 5750
-Wire Wire Line
-	7400 5850 7400 6300
-Wire Wire Line
-	7400 6300 6350 6300
-Wire Wire Line
-	6350 6400 7500 6400
-Wire Wire Line
-	7500 6400 7500 5950
-Wire Wire Line
-	7750 6900 4750 6900
-Wire Wire Line
-	4750 6900 4750 6200
-Wire Wire Line
-	4750 6200 5000 6200
-Wire Wire Line
-	7750 5850 7400 5850
-Wire Wire Line
-	7500 5950 7750 5950
-Wire Wire Line
-	7750 6050 7750 6900
-Wire Wire Line
-	7750 5400 7750 5650
-$Comp
-L mini_keyboard-rescue:Joystick-joystick U2
-U 1 1 5FD914AC
-P 8100 5900
-F 0 "U2" H 8428 5971 50  0000 L CNN
-F 1 "Joystick" H 8428 5880 50  0000 L CNN
-F 2 "Joystick:Joystick" H 8100 5900 50  0001 C CNN
-F 3 "" H 8100 5900 50  0001 C CNN
-	1    8100 5900
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5000 5600
-Wire Wire Line
-	7550 5750 7750 5750
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5FFCD2BD
-P 7450 5600
-F 0 "#FLG0101" H 7450 5675 50  0001 C CNN
-F 1 "PWR_FLAG" H 7450 5773 50  0000 C CNN
-F 2 "" H 7450 5600 50  0001 C CNN
-F 3 "~" H 7450 5600 50  0001 C CNN
-	1    7450 5600
-	1    0    0    -1  
-$EndComp
-Connection ~ 7450 5600
-Wire Wire Line
-	7450 5600 7550 5600
-Wire Wire Line
-	6350 5600 7450 5600
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5FFD2873
-P 7700 5400
-F 0 "#FLG0102" H 7700 5475 50  0001 C CNN
-F 1 "PWR_FLAG" H 7700 5573 50  0000 C CNN
-F 2 "" H 7700 5400 50  0001 C CNN
-F 3 "~" H 7700 5400 50  0001 C CNN
-	1    7700 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6350 5400 7700 5400
-Connection ~ 7700 5400
-Wire Wire Line
-	7700 5400 7750 5400
 Connection ~ 1750 650 
 Connection ~ 7200 2700
 Connection ~ 5350 2700
@@ -710,7 +574,7 @@ U 1 1 5FDC6F80
 P 5050 2250
 F 0 "SW6" H 5050 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 5050 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 5050 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 5050 2250 50  0001 C CNN
 F 3 "~" H 5050 2250 50  0001 C CNN
 	1    5050 2250
 	1    0    0    -1  
@@ -721,7 +585,7 @@ U 1 1 5FDC6F68
 P 3350 2250
 F 0 "SW1" H 3350 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 3350 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 3350 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 3350 2250 50  0001 C CNN
 F 3 "~" H 3350 2250 50  0001 C CNN
 	1    3350 2250
 	1    0    0    -1  
@@ -754,7 +618,7 @@ U 1 1 5FD68648
 P 8600 2250
 F 0 "SW16" H 8600 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 8600 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 8600 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 8600 2250 50  0001 C CNN
 F 3 "~" H 8600 2250 50  0001 C CNN
 	1    8600 2250
 	1    0    0    -1  
@@ -765,9 +629,147 @@ U 1 1 5FD68630
 P 6900 2250
 F 0 "SW11" H 6900 2517 50  0000 C CNN
 F 1 "SW_DIP_x01" H 6900 2426 50  0000 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_Plate" H 6900 2250 50  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate" H 6900 2250 50  0001 C CNN
 F 3 "~" H 6900 2250 50  0001 C CNN
 	1    6900 2250
 	1    0    0    -1  
 $EndComp
+Text Label 2450 5700 0    50   ~ 0
+in1
+Text Label 2250 5800 0    50   ~ 0
+in2
+Text Label 2050 5900 0    50   ~ 0
+in3
+Text Label 1850 6000 0    50   ~ 0
+in4
+Text Label 1650 6100 0    50   ~ 0
+in5
+Wire Wire Line
+	3650 4250 3650 4750
+Connection ~ 3650 4250
+Wire Wire Line
+	5350 4250 5350 4750
+Connection ~ 5350 4250
+Wire Wire Line
+	7200 4250 7200 4750
+Connection ~ 7200 4250
+Wire Wire Line
+	8900 4250 8900 4750
+Connection ~ 8900 4250
+Text Label 3650 4750 0    50   ~ 0
+out1
+Text Label 5350 4750 0    50   ~ 0
+out2
+Text Label 7200 4750 0    50   ~ 0
+out3
+Text Label 8900 4750 0    50   ~ 0
+out4
+Text Label 6600 6750 0    50   ~ 0
+in1
+Text Label 6600 6550 0    50   ~ 0
+in3
+Text Label 6600 6450 0    50   ~ 0
+in4
+Text Label 6600 6350 0    50   ~ 0
+in5
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 60183F68
+P 7650 6500
+F 0 "J1" H 7758 6881 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 7758 6790 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7650 6500 50  0001 C CNN
+F 3 "~" H 7650 6500 50  0001 C CNN
+	1    7650 6500
+	0    -1   -1   0   
+$EndComp
+Text Label 7850 5450 1    50   ~ 0
+GND
+Text Label 7750 5450 1    50   ~ 0
+5V
+Text Label 7650 5450 1    50   ~ 0
+VRY
+Text Label 7550 5450 1    50   ~ 0
+VRX
+Text Label 7450 5450 1    50   ~ 0
+SW
+Wire Wire Line
+	7850 5750 7450 5750
+Wire Wire Line
+	7750 5950 7450 5950
+Wire Wire Line
+	7850 5750 7850 6300
+Wire Wire Line
+	7750 5950 7750 6300
+NoConn ~ 6600 5850
+NoConn ~ 6600 5650
+NoConn ~ 5200 5950
+NoConn ~ 5200 5850
+NoConn ~ 5200 5750
+NoConn ~ 5200 5650
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 602049E6
+P 7450 5750
+F 0 "#FLG0101" H 7450 5825 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 5923 50  0000 C CNN
+F 2 "" H 7450 5750 50  0001 C CNN
+F 3 "~" H 7450 5750 50  0001 C CNN
+	1    7450 5750
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 5750
+Wire Wire Line
+	7450 5750 6600 5750
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 60205AA3
+P 7450 5950
+F 0 "#FLG0102" H 7450 6025 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 6123 50  0000 C CNN
+F 2 "" H 7450 5950 50  0001 C CNN
+F 3 "~" H 7450 5950 50  0001 C CNN
+	1    7450 5950
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 5950
+Wire Wire Line
+	7450 5950 6600 5950
+Wire Wire Line
+	7650 6300 7650 6050
+Wire Wire Line
+	7650 6050 6600 6050
+Wire Wire Line
+	7550 6300 7550 6150
+Wire Wire Line
+	7550 6150 6600 6150
+Wire Wire Line
+	7450 6300 7450 6250
+Wire Wire Line
+	7450 6250 6600 6250
+$Comp
+L mini_keyboard-rescue:ProMicro-promicro U1
+U 1 1 60148DE3
+P 5900 6400
+F 0 "U1" H 5900 7437 60  0000 C CNN
+F 1 "ProMicro" H 5900 7331 60  0000 C CNN
+F 2 "promicro:ProMicro" H 6000 5350 60  0001 C CNN
+F 3 "" H 6000 5350 60  0000 C CNN
+	1    5900 6400
+	1    0    0    -1  
+$EndComp
+Text Label 6600 6650 0    50   ~ 0
+in2
+NoConn ~ 5200 6150
+NoConn ~ 5200 6050
+Text Label 5200 6250 2    50   ~ 0
+out1
+Text Label 5200 6450 2    50   ~ 0
+out2
+Text Label 5200 6650 2    50   ~ 0
+out3
+Text Label 5200 6750 2    50   ~ 0
+out4
+NoConn ~ 5200 6350
+NoConn ~ 5200 6550
 $EndSCHEMATC
